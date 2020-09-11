@@ -1,4 +1,4 @@
-@Library('jenkins-shared-library@master') _
+
 pipeline{
     agent {label 'java'}
     environment{
@@ -6,14 +6,7 @@ pipeline{
     }
     
     stages{
-        stage('Git Checkout') {
-            steps{
-                gitCheckout(
-                    branch: "master",
-                    url: "https://github.com/Indianche/demopipeline.git"
-                )
-            }
-        }
+        
         
         stage("maven build"){
             steps{
