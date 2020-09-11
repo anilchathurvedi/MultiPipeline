@@ -10,7 +10,7 @@ pipeline{
             steps{
                 gitCheckout(
                     branch: "master",
-                    url: "https://github.com/Indianche/multibranchnew.git"
+                    url: "https://github.com/Indianche/demopipeline.git"
                 )
             }
         }
