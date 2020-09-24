@@ -8,10 +8,9 @@ pipeline{
     stage('Git Checkout') {
             steps{
                
-                gitCheckout(
-                    branch: "master",
-                    url: "https://github.com/sravankumar77/TimeOutException.git"
-                )
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/master']],
+                    doGenerateSubmoduleConfigurations: false,extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sravankumar77/PipeLine.git']]])
             }
         }
     
