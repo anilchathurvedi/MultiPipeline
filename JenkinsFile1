@@ -1,7 +1,7 @@
 @Library('jenkins-shared-library@master') _
 
 pipeline{
-    agent {label 'java'}
+    agent any
     environment{
        PATH = "/usr/share/maven/bin:$PATH"
     }
@@ -14,7 +14,7 @@ pipeline{
                 gitCheckout(
                     
                     branch: "master",
-                    url: "https://https://github.com/sravankumar77/SharedLibrary.git"
+                    url: "https://github.com/anilchathurvedi/MultiPipeline.git"
                 )
             }
         }
