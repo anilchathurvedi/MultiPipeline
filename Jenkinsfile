@@ -1,6 +1,6 @@
 
 pipeline{
-    agent {label 'java'}
+    agent any
     environment{
        PATH = "/usr/share/maven/bin:$PATH"
     }
@@ -10,7 +10,7 @@ pipeline{
                
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/master']],
-                    doGenerateSubmoduleConfigurations: false,extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sravankumar77/PipeLine.git']]])
+                    doGenerateSubmoduleConfigurations: false,extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/anilchathurvedi/MultiPipeline.git']]])
             }
         }
     
